@@ -1,0 +1,12 @@
+# Ignore all pycache files
+__pycache__/
+*.pyc
+
+# Ignore all .csv
+*.csv
+
+# Ignore venv
+venv/
+
+# Ignore .env
+.env

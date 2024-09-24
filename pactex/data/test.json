@@ -1,0 +1,70 @@
+[
+  {
+    'url_collection': 'https://www.pactex.com/imported-terry-towels.html',
+    'name_collection': 'Imported Terry Towels',
+    'button_text': 'View Collection'
+  },
+  {
+    'url_collection': 'https://www.pactex.com/softex-towels.html',
+    'name_collection': 'Softex Towels',
+    'button_text': 'View Collection'
+  },
+  {
+    'url_collection': 'https://www.pactex.com/pearl-luxury-towels.html',
+    'name_collection': 'Pearl Luxury Towels',
+    'button_text': 'View Collection'
+  },
+  {
+    'url_collection': 'https://www.pactex.com/ultra-luxury-towels.html',
+    'name_collection': 'Ultra Luxury Towels',
+    'button_text': 'View Collection'
+  },
+  {
+    'url_collection': 'https://www.pactex.com/platinum-towels.html',
+    'name_collection': 'Platinum Towels',
+    'button_text': 'View Collection'
+  },
+  {
+    'url_collection': 'https://www.pactex.com/q-tee-ultra-luxury-towel.html',
+    'name_collection': 'Q-Tee Ultra Luxury Towel White & Beige',
+    'button_text': 'View Collection'
+  },
+  {
+    'url_collection': 'https://www.pactex.com/q-tee-platinum-towels.html',
+    'name_collection': 'Q-Tee Platinum Towels White & Beige',
+    'button_text': 'View Collection'
+  },
+  {
+    'url_collection': 'https://www.pactex.com/martex-by-westpoint-home-towel.html',
+    'name_collection': 'Martex® Brentwood Towels',
+    'button_text': 'View Collection'
+  },
+  {
+    'url_collection': 'https://www.pactex.com/golden-touchtm-towels.html',
+    'name_collection': 'Golden Touch™ Towels',
+    'button_text': 'View Collection'
+  },
+  {
+    'url_collection': 'https://www.pactex.com/temptation-bamboo-towel.html',
+    'name_collection': 'Temptation Bamboo Towel',
+    'button_text': 'View Collection'
+  },
+  {
+    'url_collection': 'https://www.pactex.com/misc-towels.html',
+    'name_collection': 'Surgical Huck Towels',
+    'button_text': 'View Collection'
+  }
+]
+
+[
+  {
+    'url_collection': 'https://www.pactex.com/martex-cabana-collection-pool-towels.html',
+    'name_collection': 'Martex Pool Towels',
+    'button_text': 'View Collection'
+  },
+  {
+    'url_collection': 'https://www.pactex.com/martex-tropical-stripe-pool-towels.html',
+    'name_collection': 'Martex Tropical Stripe Pool Towels',
+    'button_text': 'View Collection'
+  }
+]

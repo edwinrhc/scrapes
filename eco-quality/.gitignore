@@ -1,0 +1,21 @@
+# Ignore all pycache directories
+__pycache__/
+
+# Ignore the environment file
+.env
+venv/
+/venv
+
+# Ignore the virtual environment
+.env/
+venv/
+/venv
+
+# Ignora all .csv files
+*.csv
+
+# Ignore excel files
+*.xlsx
+
+# Ignore data folder
+data/

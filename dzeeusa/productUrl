@@ -1,0 +1,53 @@
+
+import csv
+import requests
+from bs4 import BeautifulSoup
+import parameters as params
+
+def fetch_product_urls(category_url):
+    response = requests.get(category_url)
+    soup = BeautifulSoup(response.text, 'html.parser')
+    product_links = [a['href'] for a in soup.select('li.product.type-product a') if 'href' in a.attrs]
+    return product_links
+def fetch_all_categories_and_products(base_url):
+    all_categories = []
+    all_products = []
+
+    # Fetch categories first
+    category_response = requests.get(base_url)
+    category_soup = BeautifulSoup(category_response.text, 'html.parser')
+    category_links = [a['href'] for a in category_soup.select('li.menu-item.menu-item-type-taxonomy.menu-item-object-product_cat a') if 'href' in a.attrs]
+
+    for category in category_links:
+        full_url = category  # Adjust if relative URL
+        response = requests.get(full_url)
+        category_soup = BeautifulSoup(response.text, 'html.parser')
+        # Select subcategories within the current category page
+        subcategory_links = [a['href'] for a in category_soup.select('li.product-category a') if 'href' in a.attrs]
+
+        # Handle subcategories or main categories
+        if subcategory_links:
+            for sub_url in subcategory_links:
+                if sub_url not in all_categories:  # Avoid duplicates
+                    all_categories.append(sub_url)
+                    product_urls = fetch_product_urls(sub_url)
+                    all_products.extend(product_urls)  # Add products from subcategories
+        else:
+            if full_url not in all_categories:
+                all_categories.append(full_url)
+                product_urls = fetch_product_urls(full_url)
+                all_products.extend(product_urls)  # Add products from main category
+
+    return all_categories, all_products
+
+# Start URL
+url = params.BASE_URL
+categories, products = fetch_all_categories_and_products(url)
+
+# Save products to CSV
+with open('products_urls.csv', 'w', newline='') as file:
+    writer = csv.writer(file)
+    for product in products:
+        writer.writerow([product])  # Each product URL on a new row
+
+print("Products saved to CSV.")
